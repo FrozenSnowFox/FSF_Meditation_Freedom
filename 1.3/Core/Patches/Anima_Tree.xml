@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			
+	<!-- Changed Meditation Focus Strength -->
+			
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/statBases/MeditationFocusStrength</xpath>
+        <value>
+          <MeditationFocusStrength>0.4</MeditationFocusStrength>
+        </value>
+      </li>
+			
+	<!-- Fix Minify Ability -->
+ 
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/minifiedDef</xpath>
+        <value>
+          <minifiedDef>MinifiedTree</minifiedDef>
+        </value>
+      </li>
+			
+	<!-- Allow Planting -->
+ 
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/plant/sowTags</xpath>
+        <value>
+          <sowTags>
+            <li>Ground</li>
+          </sowTags>
+        </value>
+      </li>
+			
+	<!-- Remove Research -->
+ 
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/plant/sowResearchPrerequisites</xpath>
+      </li>
+			
+	<!-- Fix Tree Stats -->
+ 
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/plant</xpath>
+        <value>
+          <mustBeWildToSow>false</mustBeWildToSow>
+          <blockAdjacentSow>false</blockAdjacentSow>
+          <interferesWithRoof>false</interferesWithRoof>
+          <neverBlightable>true</neverBlightable>
+        </value>
+      </li>
+			
+	<!-- Remove Artificial Building -->
+ 
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets</xpath>
+        <value>
+         <offsets>
+          <li Class="FocusStrengthOffset_ArtificialBuildings">
+            <radius>0</radius>
+            <curve>
+              <points>
+                <li>(0,   0.0)</li>
+                <li>(5,  -0.08)</li>
+                <li>(10, -0.15)</li>
+                <li>(50, -0.3)</li>
+              </points>
+            </curve>
+          </li>
+          <li Class="FocusStrengthOffset_BuildingDefs">
+            <defs>
+              <AnimusStone>0</AnimusStone>
+              <NatureShrine_Small>0</NatureShrine_Small>
+              <NatureShrine_Large>0</NatureShrine_Large>
+            </defs>
+            <radius>0</radius>
+            <maxBuildings>0</maxBuildings>
+            <explanationKey>MeditationFocusPerAnimusStoneAndShrine</explanationKey>
+            <explanationKeyAbstract>MeditationFocusPerAnimusStoneAndShrineAbstract</explanationKeyAbstract>
+          </li>
+         </offsets>
+        </value>
+      </li>
+			
+	<!-- Stop Grass Dying -->
+ 
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Plant_GrassAnima"]/plant/lifespanDaysPerGrowDays</xpath>
+        <value>
+          <lifespanDaysPerGrowDays>1200</lifespanDaysPerGrowDays>
+        </value>
+      </li>
+			
+		</operations>
+	</Operation>
+	
+</Patch>

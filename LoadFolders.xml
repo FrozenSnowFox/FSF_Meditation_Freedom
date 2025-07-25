@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<loadFolders>
+	
+	<v1.1>	
+
+		<!-- Vanilla -->
+		
+		<li>/</li>
+		<li>1.1</li>
+		
+	</v1.1>
+	
+	<v1.2>	
+
+		<!-- Vanilla -->
+		
+		<li>/</li>
+		<li>1.2</li>
+		
+	</v1.2>
+	
+	<v1.3>	
+
+		<!-- Vanilla -->
+		
+		<li>/</li>
+		<li>1.3/Core</li>
+	
+		<!-- Mods -->
+		
+		<!-- Vanilla Factions Expanded Vikings -->
+		<li IfModActive="OskarPotocki.VFE.Vikings">1.3/Mods/Vanilla Factions Expanded Vikings</li>
+		
+	</v1.3>
+	
+	<v1.4>	
+
+		<!-- Vanilla -->
+		
+		<li>/</li>
+		<li>1.4/Core</li>
+	
+		<!-- Mods -->
+		
+		<!-- Vanilla Factions Expanded Vikings -->
+		<li IfModActive="OskarPotocki.VFE.Vikings">1.4/Mods/Vanilla Factions Expanded Vikings</li>
+		
+	</v1.4>
+	
+	<v1.5>	
+
+		<!-- Ludeon -->
+		
+		<!-- Royalty -->
+		
+		<li>/</li>
+		<li>1.5/Ludeon/Royalty</li>
+		
+	</v1.5>
+	
+	<v1.6>	
+
+		<!-- Ludeon -->
+		
+		<!-- Royalty -->
+		
+		<li>/</li>
+		<li>1.6/Ludeon/Royalty</li>
+		
+	</v1.6>
+	
+</loadFolders>

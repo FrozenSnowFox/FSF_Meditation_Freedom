@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			
+	<!-- Natural - Remove Nature Psycaster Build Requirement -->						
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "NatureShrineBase"]/placeWorkers</xpath>
+				<value>
+					<placeWorkers>
+						<li>PlaceWorker_ArtificialBuildingsNear</li>
+						<li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+					</placeWorkers>
+				</value>
+			</li>
+	
+	<!-- Natural - Small Nature Shrine -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "NatureShrine_Small"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+							<li>Flame</li>
+						</focusTypes>
+					</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "NatureShrine_Small"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.4</MeditationFocusStrength>
+				</value>
+			</li>
+			
+	<!-- Natural - Large Nature Shrine -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "NatureShrine_Large"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+							<li>Flame</li>
+						</focusTypes>
+					</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "NatureShrine_Large"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.4</MeditationFocusStrength>
+				</value>
+			</li>
+			
+	<!-- Natural - Animus Stone -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AnimusStone"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.4</MeditationFocusStrength>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AnimusStone"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+							<li>Flame</li>
+						</focusTypes>
+					</li>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+</Patch>

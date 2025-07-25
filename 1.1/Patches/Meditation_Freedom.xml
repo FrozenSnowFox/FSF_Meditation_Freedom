@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	
+	<!-- Artistic - Sculptures -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "SculptureBase"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+						</focusTypes>
+						<offsets>
+							<li Class="FocusStrengthOffset_Quality">
+								<curve>
+									<points>
+										<li>(0,0.30)</li> <!-- awful -->
+										<li>(1,0.30)</li> <!-- poor -->
+										<li>(2,0.30)</li> <!-- normal -->
+										<li>(3,0.30)</li> <!-- good -->
+										<li>(4,0.30)</li> <!-- excellent -->
+										<li>(5,0.30)</li> <!-- masterwork -->
+										<li>(6,0.30)</li> <!-- legendary -->
+									</points>
+								</curve>
+							</li>
+						</offsets>
+					</li>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+	
+	
+	
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	
+	<!-- Morbid - Grave -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Grave"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.3</MeditationFocusStrength>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Grave"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+						</focusTypes>
+						<offsets>
+							<li Class="FocusStrengthOffset_GraveFull">
+								<offset>0.0</offset>
+							</li>
+							<li Class="FocusStrengthOffset_GraveCorpseRelationship">
+								<offset>0.0</offset>
+							</li>
+						</offsets>
+					</li>
+				</value>
+			</li>
+			
+	<!-- Morbid - Sarcophagus -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Sarcophagus"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.3</MeditationFocusStrength>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Sarcophagus"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+						</focusTypes>
+						<offsets>
+							<li Class="FocusStrengthOffset_GraveFull">
+								<offset>0.0</offset>
+							</li>
+							<li Class="FocusStrengthOffset_GraveCorpseRelationship">
+								<offset>0.0</offset>
+							</li>
+						</offsets>
+					</li>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+	
+	
+	
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	
+	<!-- Natural - Campfire -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Campfire"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.3</MeditationFocusStrength>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Campfire"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+						</focusTypes>
+						<offsets>
+							<li Class="FocusStrengthOffset_Lit">
+								<offset>0.0</offset>
+							</li>
+						</offsets>
+					</li>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+	
+	
+	
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			
+	<!-- Natural - Remove Nature Psycaster Build Requirement -->						
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "NatureShrineBase"]/placeWorkers</xpath>
+				<value>
+					<placeWorkers>
+						<li>PlaceWorker_ArtificialBuildingsNear</li>
+					</placeWorkers>
+				</value>
+			</li>
+	
+	<!-- Natural - Small Nature Shrine -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "NatureShrine_Small"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+						</focusTypes>
+						<offsets>
+							<li Class="FocusStrengthOffset_ArtificialBuildings">
+								<radius>0.0</radius>
+								<curve>
+									<points>
+										<li>(0,   0.0)</li>
+										<li>(5,  -0.08)</li>
+										<li>(10, -0.15)</li>
+										<li>(50, -0.3)</li>
+									</points>
+								</curve>
+							</li>
+						</offsets>
+					</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "NatureShrine_Small"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.3</MeditationFocusStrength>
+				</value>
+			</li>
+			
+	<!-- Natural - Large Nature Shrine -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "NatureShrine_Large"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+						</focusTypes>
+						<offsets>
+							<li Class="FocusStrengthOffset_ArtificialBuildings">
+								<radius>0.0</radius>
+								<curve>
+									<points>
+										<li>(0,   0.0)</li>
+										<li>(5,  -0.08)</li>
+										<li>(10, -0.15)</li>
+										<li>(50, -0.3)</li>
+									</points>
+								</curve>
+							</li>
+						</offsets>
+					</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "NatureShrine_Large"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.3</MeditationFocusStrength>
+				</value>
+			</li>
+			
+	<!-- Natural - Large Nature Shrine -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AnimusStone"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.3</MeditationFocusStrength>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "AnimusStone"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+						</focusTypes>
+						<offsets>
+							<li Class="FocusStrengthOffset_ArtificialBuildings">
+								<radius>0.0</radius>
+								<curve>
+									<points>
+										<li>(0,   0.0)</li>
+										<li>(5,  -0.08)</li>
+										<li>(10, -0.15)</li>
+										<li>(50, -0.3)</li>
+									</points>
+								</curve>
+							</li>
+						</offsets>
+					</li>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+	
+	
+	
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	
+	<!-- Dignified - Throne -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Throne"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.3</MeditationFocusStrength>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "Throne"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+						</focusTypes>
+						<offsets>
+							<li Class="FocusStrengthOffset_ThroneSatisfiesRequirements">
+								<offset>0.0</offset>
+							</li>
+							<li Class="FocusStrengthOffset_RoomImpressiveness">
+								<curve>
+									<points>
+										<li>(0, 0.0)</li>
+										<li>(30, 0.0)</li>
+										<li>(60, 0.0)</li>
+										<li>(100,  0.0)</li>
+										<li>(170,  0.0)</li>
+									</points>
+								</curve>
+							</li>
+						</offsets>
+					</li>
+				</value>
+			</li>
+			
+	<!-- Dignified - Grand Throne -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "GrandThrone"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.3</MeditationFocusStrength>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "GrandThrone"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+						</focusTypes>
+						<offsets>
+							<li Class="FocusStrengthOffset_ThroneSatisfiesRequirements">
+								<offset>0.0</offset>
+							</li>
+							<li Class="FocusStrengthOffset_RoomImpressiveness">
+								<curve>
+									<points>
+										<li>(0, 0.0)</li>
+										<li>(30, 0.0)</li>
+										<li>(60, 0.0)</li>
+										<li>(100,  0.0)</li>
+										<li>(170,  0.0)</li>
+									</points>
+								</curve>
+							</li>
+						</offsets>
+					</li>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+</Patch>

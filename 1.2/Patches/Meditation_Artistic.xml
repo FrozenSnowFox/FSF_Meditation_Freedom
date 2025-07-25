@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	
+	<!-- Artistic - Sculptures -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[@Name = "SculptureBase"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+							<li>Flame</li>
+						</focusTypes>
+						<offsets>
+							<li Class="FocusStrengthOffset_Quality">
+								<curve>
+									<points>
+										<li>(0,0.4)</li> <!-- awful -->
+										<li>(1,0.4)</li> <!-- poor -->
+										<li>(2,0.4)</li> <!-- normal -->
+										<li>(3,0.4)</li> <!-- good -->
+										<li>(4,0.4)</li> <!-- excellent -->
+										<li>(5,0.4)</li> <!-- masterwork -->
+										<li>(6,0.4)</li> <!-- legendary -->
+									</points>
+								</curve>
+							</li>
+						</offsets>
+					</li>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+	
+	
+	
+	
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	
+	<!-- Artistic - Stele Large -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "SteleLarge"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.4</MeditationFocusStrength>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "SteleLarge"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+							<li>Flame</li>
+						</focusTypes>
+					</li>
+				</value>
+			</li>
+			
+	<!-- Artistic - Stele Grand -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "SteleGrand"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.4</MeditationFocusStrength>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "SteleGrand"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+							<li>Flame</li>
+						</focusTypes>
+					</li>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+</Patch>

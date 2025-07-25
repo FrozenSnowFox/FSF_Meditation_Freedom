@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName = "VFEV_RuneStone"]</xpath>
+			</li>
+
+	<!-- Update Rune Stone Stats -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VFEV_RuneStone"]/statBases/MeditationFocusStrength</xpath>
+				<value>
+					<MeditationFocusStrength>0.4</MeditationFocusStrength>
+				</value>
+			</li>
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VFEV_RuneStone"]/comps/li[@Class = "CompProperties_MeditationFocus"]</xpath>
+				<value>
+					<li Class="CompProperties_MeditationFocus">
+						<statDef>MeditationFocusStrength</statDef>
+						<focusTypes>
+							<li>Dignified</li>
+							<li>Natural</li>
+							<li>Artistic</li>
+							<li>Morbid</li>
+							<li>Minimal</li>
+							<li>Flame</li>
+						</focusTypes>
+					</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName = "VFEV_RuneStone"]/placeWorkers</xpath>
+				<value>
+					<placeWorkers>
+						<li>PlaceWorker_ArtificialBuildingsNear</li>
+						<li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+					</placeWorkers>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+</Patch>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+	
+	<!-- Remove Backstory Limitations -->
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/MeditationFocusDef[defName = "Natural"]/requiredBackstoriesAny</xpath>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/MeditationFocusDef[defName = "Artistic"]/incompatibleBackstoriesAny</xpath>
+			</li>
+			
+		</operations>
+	</Operation>
+	
+</Patch>

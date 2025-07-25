@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<XmlExtensions.SettingsMenuDef>
+		<defName>FrozenSnowFoxMeditationFreedomSettings</defName> <!--Can be anything unique with no periods-->
+		<modId>FrozenSnowFox.MeditationFreedom</modId> <!--MUST be the same as the one entered earlier-->    
+		<label>FrozenSnowFox Meditation Freedom</label> <!-- This is what displays as your mod's name-->    
+		<settings> <!--This is where you define what settings are in the settings menu-->
+
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>For any changed settings to take effect the game must be restarted.</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFMeditationFreedomModWarning</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Meditation Freedom Settings</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFMeditationFreedomSettingsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- Meditation Freedom -->
+					
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Meditation Freedom provides a suite of changes to allow you to set up meditation areas for your psycasters however you please without nerfing their psyfocus gain.</text>
+				<tKey>FSFMeditationFreedomBasicDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>List of active changes.\nMeditation Focus item is available in Architect Menu.\nAnima Grass lifespan has been greatly extended to prevent premature death.\nNegative Artificial Building Radius has been disabled on Anima Trees and Anima Grass.\nAnima Trees can now be moved and planted.\nAnima Trees can be planted adjacent to trees and can be planted under roofs.\nNature Shrines can be built without a Nature Psycaster.</text>
+				<tKey>FSFMeditationFreedomFocusStrDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>Remove Backstory Requirement for Natural Meditation</label>
+				<key>FSFMeditationFreedomBackstoryReq</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFMeditationFreedomBackstoryReq</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Slider">
+				<key>FSFMeditationFreedomFocusStr</key>
+				<defaultValue>0.40</defaultValue>
+				<min>0</min>
+				<max>5</max>
+				<decimals>2</decimals>
+				<label>Meditation Focus Strength {FSFMeditationFreedomFocusStr}</label>
+				<tKey>FSFMeditationFreedomFocusStr</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>The Meditation Focus is an item that can be freely placed anywhere and allows pawns to meditate with any type of meditation.  This allows you to set up a optimal meditation area however and wherever you like.  The strength of the Meditation Focus can be adjusted via the slider above.  The number listed is the speed at which a pawn gains psyfocus from meditating at the Meditation Focus.  The default is 0.40, the Anima Tree with all bonuses provides 0.36, a Grand Throne with all bonuses provides 0.33.</text>
+				<tKey>FSFMeditationFreedomFocusStrDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Slider">
+				<key>FSFMeditationFreedomAnimaTreeStr</key>
+				<defaultValue>0.28</defaultValue>
+				<min>0</min>
+				<max>5</max>
+				<decimals>2</decimals>
+				<label>Anima Tree Focus Strength {FSFMeditationFreedomAnimaTreeStr}</label>
+				<tKey>FSFMeditationFreedomAnimaTreeStr</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>The meditation strength of the Anima Tree can be adjusted via the slider above.  The number listed is the base speed at which a pawn gains psyfocus from meditating at the Anima Tree.  The default base speed is 0.28 which excludes attachement bonuses.</text>
+				<tKey>FSFMeditationFreedomAnimaTreeStrDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="XmlExtensions.Setting.Checkbox">
+				<label>Unlock Psycast Trees</label>
+				<key>FSFUnlockPsycastTrees</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFMeditationFreedomUnlockPsycastTreesTitle</tKey>
+			</li>
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="XmlExtensions.Setting.Text">
+				<text>Unlocks the locked Psycast trees from Vanilla Psycasts Expanded allowing anyone to use them.</text>
+				<tKey>FSFMeditationFreedomUnlockPsycastTreesDesc</tKey>
+			</li>
+			<li MayRequire="VanillaExpanded.VPsycastsE" Class="XmlExtensions.Setting.SetColor"/>
+			
+			
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+						
+		</settings>
+	</XmlExtensions.SettingsMenuDef>
+
+</Defs>
