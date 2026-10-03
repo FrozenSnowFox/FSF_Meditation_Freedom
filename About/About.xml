@@ -29,6 +29,7 @@
 	    </li>
 	</modDependencies>
 	<loadAfter>
+		<li>tarojun.morishep.onioftherim</li>
 		<li>Trimming.The.Fat</li>
 		<li>VanillaExpanded.VPE.Puppeteer</li>
 		<li>VanillaExpanded.VPsycastsE</li>
