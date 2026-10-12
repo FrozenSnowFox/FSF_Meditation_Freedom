@@ -59,7 +59,7 @@
 		
 	</v1.5>
 	
-	<v1.6>	
+	<v1.6>
 
 		<!-- Ludeon -->
 		
@@ -69,5 +69,16 @@
 		<li>1.6/Ludeon/Royalty</li>
 		
 	</v1.6>
+	
+	<v1.7>
+
+		<!-- Ludeon -->
+		
+		<!-- Royalty -->
+		
+		<li>/</li>
+		<li>1.7/Ludeon/Royalty</li>
+		
+	</v1.7>
 	
 </loadFolders>
